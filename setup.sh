@@ -50,7 +50,7 @@ wget -O one-by-one-person-detection.mp4 https://github.com/intel-iot-devkit/samp
 #Download the model
 cd /opt/intel/openvino/deployment_tools/tools/model_downloader
 #sudo 
-./downloader.py --name person-detection-retail-0013
+./downloader.py --name person-detection-retail-0013 --output_dir  resources
 
 
 
