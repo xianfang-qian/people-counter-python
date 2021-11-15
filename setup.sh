@@ -21,25 +21,36 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #Install the dependencies
-sudo apt update
-sudo apt-get install python3-pip
-sudo apt-get install mosquitto mosquitto-clients
+#QQ add the below code: remove sudo 
+#sudo 
+apt update
+#sudo 
+apt-get install python3-pip
+#sudo 
+apt-get install mosquitto mosquitto-clients
 pip3 install numpy paho-mqtt jupyter
-sudo apt install libzmq3-dev libkrb5-dev
-sudo apt install ffmpeg
+#sudo 
+apt install libzmq3-dev libkrb5-dev
+#sudo 
+apt install ffmpeg
 
 #Install Nodejs and its depedencies
 
-sudo add-apt-repository -y -r ppa:chris-lea/node.js
-sudo rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list
-sudo rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list.save
+#sudo 
+add-apt-repository -y -r ppa:chris-lea/node.js
+#sudo 
+rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list
+#sudo
+rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list.save
 curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
 VERSION=node_6.x
 DISTRO="$(lsb_release -s -c)"
 echo "deb https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 echo "deb-src https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list
-sudo apt-get update
-sudo apt-get install nodejs
+#sudo 
+apt-get update
+#sudo
+apt-get install nodejs
 
 #Download the video
 cd resources
@@ -47,7 +58,8 @@ wget -O one-by-one-person-detection.mp4 https://github.com/intel-iot-devkit/samp
 
 #Download the model
 cd /opt/intel/openvino/deployment_tools/tools/model_downloader
-sudo ./downloader.py --name person-detection-retail-0013
+#sudo 
+./downloader.py --name person-detection-retail-0013
 
 
 
